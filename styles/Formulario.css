@@ -1,0 +1,235 @@
+
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 620px;
+    background-color: black;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    z-index: 1001; /* Asegúrate de que esté por encima de otros elementos */
+    
+}
+
+.texto-formulario{
+
+    color: #fcfcfc;
+}
+
+/* Estilos para el contenido del modal */
+.modal-contenido {
+    position: relative;
+}
+
+/* Estilos para el botón de cerrar */
+.cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cerrar-modal:hover {
+    color: #a86104;
+}
+
+/* Estilos para el formulario */
+#formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#formulario-contacto label {
+    font-weight: bold;
+}
+
+#formulario-contacto input,
+#formulario-contacto textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    color: #fcfcfc;
+    background-color: black;
+    border-radius: 5px;
+}
+
+#formulario-contacto button {
+    padding: 10px;
+    background-color: #a86104;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#formulario-contacto button:hover {
+    background-color: #ffffff;
+}
+
+/* Estilos para el fondo oscuro */
+.fondo-oscuro {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+    z-index: 1000; /* Debajo del modal */
+}
+
+/* Animación de entrada (aparecer desde arriba) */
+@keyframes slideIn {
+    from {
+        transform: translate(-50%, -100%); /* Comienza arriba */
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%); /* Termina en el centro */
+        opacity: 1;
+    }
+}
+
+/* Animación de salida (desaparecer hacia arriba) */
+@keyframes slideOut {
+    from {
+        transform: translate(-50%, -50%); /* Comienza en el centro */
+        opacity: 1;
+    }
+    to {
+        transform: translate(-50%, -100%); /* Termina arriba */
+        opacity: 0;
+    }
+}
+
+/* Clase para la animación de entrada */
+.modal-enter {
+    animation: slideIn 0.3s forwards;
+}
+
+/* Clase para la animación de salida */
+.modal-exit {
+    animation: slideOut 0.3s forwards;
+}
+
+
+
+/* Contenedor principal en flexbox */
+.flex-contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Iconos en columna */
+.redes2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 50px;
+}
+
+/* Estilos de los iconos */
+.redes2 .complet  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: white;
+    background-color: #a86104;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Cambia el color al pasar el cursor */
+.redes2 .complet:hover {
+    background-color: #fcfcfc;
+    color: #a86104;
+}
+
+/* Estilo del tooltip (nombre de la red social) */
+.redes2 .complet::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 50px;
+    background-color: #a86104;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Muestra el nombre al pasar el cursor */
+.redes2 .complet:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.redes2 .nodef {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Cambia el color al pasar el cursor */
+.redes2 .nodef:hover {
+    color: #a86104;
+}
+
+/* Estilo del tooltip (nombre de la red social) */
+.redes2 .nodef::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 50px;
+    background-color: #a86104;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Muestra el nombre al pasar el cursor */
+.redes2 .nodef:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Estilos del formulario */
+.modal1 {
+    width: 600px;
+    background-color: black;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+   
+}
+

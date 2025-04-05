@@ -1,0 +1,419 @@
+/* Estilos para la galería de imágenes */
+#galeria {
+  padding: 100px;
+  background-color: (20, 21, 23 rgba(20, 21, 23, var(--tw-bg-opacity)));
+}
+#mosaico {
+  background-color: (20, 21, 23 rgba(20, 21, 23, var(--tw-bg-opacity)));
+}
+
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+}
+
+.imagen-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.imagen-container img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.8s ease, filter 0.3s ease;
+}
+
+.imagen-container:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.8);
+  transition: transform 0.8s ease;
+}
+
+.imagen-container a {
+  display: block;
+  text-decoration: none;
+}
+
+/* Estilos para el texto que aparece sobre la imagen */
+.texto-imagen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #a86104; /* Fondo semitransparente */
+  color: white;
+  padding: 10px 20px;
+
+  font-size: 1.2em;
+  opacity: 0; /* Inicialmente invisible */
+  transition: opacity 0.5s ease;
+  pointer-events: none; /* Evita que el texto interfiera con el clic */
+}
+
+.imagen-container:hover .texto-imagen {
+  opacity: 1; /* Hace visible el texto al pasar el mouse */
+}
+
+/* Estilos para las secciones animadas */
+.seccion-animada {
+  opacity: 0; /* Inicialmente invisible */
+  transform: translateY(50px); /* Desplazamiento inicial hacia abajo */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Estilos para el mosaico */
+
+.grid-mosaico {
+  display: grid;
+  padding-top: 85px;
+  width: 100%; /* Ajusta el ancho al contenedor padre */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(100px, 1fr)
+  ); /* Columnas dinámicas */
+  gap: 50px; /* Espacio entre las imágenes */
+  grid-auto-rows: 500px; /* Altura base de las filas */
+  grid-auto-flow: dense; /* Acomoda las imágenes de manera densa */
+}
+
+.grid-mosaico2 {
+  display: grid;
+  width: 100%; /* Ajusta el ancho al contenedor padre */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(100px, 1fr)
+  ); /* Columnas dinámicas */
+  gap: 50px; /* Espacio entre las imágenes */
+  grid-auto-rows: 500px; /* Altura base de las filas */
+  grid-auto-flow: dense; /* Acomoda las imágenes de manera densa */
+}
+
+.item-mosaico {
+  position: relative;
+  overflow: hidden;
+}
+
+.item-mosaico img {
+  width: 100%; /* Ajusta el ancho al contenedor padre */
+  height: 100%; /* Ajusta la altura al contenedor padre */
+  object-fit: inherit; /* Ajusta la imagen al contenedor sin deformarse */
+  transition: transform 0.3s ease;
+}
+
+.item-mosaico:hover img {
+  transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Ajustes para imágenes más grandes */
+.item-mosaico:nth-child(4n) {
+  grid-column: span 3; /* Ocupa 3 columnas */
+  grid-row: span 2; /* Ocupa 2 filas */
+}
+
+.item-mosaico:nth-child(1n) {
+  grid-column: span 2; /* Ocupa 2 columnas */
+}
+
+.item-mosaico2:nth-child(3n) {
+  grid-column: span 3; /* Ocupa 3 columnas */
+  grid-row: span 2; /* Ocupa 2 filas */
+}
+
+.item-mosaico2:nth-child(1n) {
+  grid-column: span 2; /* Ocupa 2 columnas */
+}
+
+@media (max-width: 768px) {
+  .grid-mosaico {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 columnas en pantallas pequeñas */
+  }
+}
+
+@media (min-width: 769px) {
+  .grid-mosaico {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas grandes */
+  }
+}
+
+/**********/
+
+html,
+body {
+  background: #242423;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.grid-mosaico > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid-mosaico > div > img {
+  width: 100%;
+  height: 100%;
+  /*  object-fit: cover; */
+}
+.grid-mosaico {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-auto-rows: 350px;
+  grid-auto-flow: dense;
+}
+
+.grid-mosaico .wide {
+  grid-column: span 2;
+}
+.grid-mosaico .tall {
+  grid-row: span 2;
+}
+.grid-mosaico .big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.grid-mosaico2 > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid-mosaico2 > div > img {
+  width: 100%;
+  height: 100%;
+  /*  object-fit: cover; */
+}
+.grid-mosaico2 {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-auto-rows: 350px;
+  grid-auto-flow: dense;
+}
+
+.grid-mosaico2 .wide {
+  grid-column: span 2;
+}
+.grid-mosaico2 .tall {
+  grid-row: span 2;
+}
+.grid-mosaico2 .big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/*********/
+
+/*imagenes de la seccion Nosotros en inicio*/
+
+/* Estilos para la sección "Nosotros" */
+#nosotros-inicio {
+    padding: 40px 20px;
+    background-color:#242423; 
+}
+
+#nosotros-inicio2 {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #242423;
+  margin: 0 auto; /* Centrar horizontalmente */
+  display: block; /* Asegurar que ocupe todo el ancho disponible */
+}
+
+.parrafo-nosotros4 {
+  max-width: 1000px; /* Limita el ancho del texto para mejor legibilidad */
+  margin: 0 auto; /* Centrar el texto */
+  color: white; /* Asegurar buen contraste con el fondo oscuro */
+}
+
+.parrafo-nosotros5 {
+  max-width: 300px; /* Limita el ancho del texto para mejor legibilidad */
+  margin: 0 auto; /* Centrar el texto */
+  color: white; /* Asegurar buen contraste con el fondo oscuro */
+}
+
+/* Título centrado */
+.titulo-nosotros {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 3em;
+    color: #e0e0e0; /* Color del texto */
+    margin-bottom: 20px;
+}
+
+.titulo-nosotros2 {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 1.8em;
+  color: #e0e0e0; /* Color del texto */
+  margin-bottom: 20px;
+}
+
+.titulo-nosotros3 {
+  text-align: center;
+  font-family: "Dosis","Montserrat", sans-serif, "Libre Franklin";
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 1em;
+  color: #e0e0e0; /* Color del texto */
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.titulo-nosotross4 {
+  text-align: center;
+  font-family: "Dosis","Montserrat", sans-serif, "Libre Franklin";
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
+  color: #e0e0e0; /* Color del texto */
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.titulo-nosotros6 {
+  text-align: center;
+  font-family: "Dosis","Montserrat", sans-serif, "Libre Franklin";
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 1em;
+  margin: 8px;
+  color: #e0e0e0; /* Color del texto */
+  
+}
+
+/* Contenedor principal */
+.contenedor-nosotros {
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en pantallas pequeñas */
+    gap: 40px; /* Espacio entre el texto y la imagen */
+    padding: 20px;
+    border: 1px solid #e0e0e0; /* Borde estilo tarjeta */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+/* Estilos para el texto */
+.texto-nosotros {
+    flex: 1; /* Ocupa el espacio disponible */
+    min-width: 300px;
+    max-width: 500px; /* Ancho mínimo para evitar que el texto se comprima demasiado */
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.parrafo-nosotros {
+    font-size:0.8em;
+    line-height: 1.6;
+    color: #555; /* Color del texto */
+    text-align: justify; /* Texto justificado */
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif, "Libre Franklin";
+    font-weight: 500;
+     /* Espacio entre párrafos */
+}
+
+.parrafo-nosotros2 {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #fafafa;
+  font-family:  "Montserrat", sans-serif, "Libre Franklin";
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.parrafo-nosotros3 {
+  font-size:1.1em;
+  line-height: 1.6;
+  color: #fafafa; /* Color del texto */
+  text-align: justify; /* Texto justificado */
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif, "Libre Franklin";
+  font-weight: 500;
+   /* Espacio entre párrafos */
+}
+
+.parrafo-nosotros4 {
+  font-size:1em;
+  line-height: 1.3;
+  color: #fafafa; /* Color del texto */
+  text-align: justify; /* Texto justificado */
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif, "Libre Franklin";
+  font-weight: 500;
+   /* Espacio entre párrafos */
+}
+
+.texto-fuerte{
+    font-weight: bold;
+    font-size: 1.6em;
+    
+}
+
+.texto-fuerte2{
+  font-weight: bold;
+  font-size: 1.6em;
+  color: #fafafa;
+}
+
+/* Estilos para la imagen */
+.imagen-nosotros {
+    flex: 0.7; /* Ocupa el espacio disponible */
+    min-width: 100px; /* Ancho mínimo para evitar que la imagen se comprima demasiado */
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen-nosotros img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Esquinas redondeadas para la imagen */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .contenedor-nosotros {
+        flex-direction: column; /* Apilar elementos en pantallas pequeñas */
+    }
+
+    .texto-nosotros, .imagen-nosotros {
+        min-width: 100%; /* Ocupar todo el ancho en pantallas pequeñas */
+    }
+}
+
+
+
+.texto-proyecto {
+  
+  margin: 30px ; /* Espacio entre párrafos */
+   /* Espacio entre párrafos */
+}
+
+.ficha-tecnica{
+  margin: 30px ; /* Espacio entre párrafos */
+}

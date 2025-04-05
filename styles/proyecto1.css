@@ -1,0 +1,227 @@
+/* Estilos generales */
+.proyectos {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .titulo-seccion {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .separador1 {
+    width: 100px;
+    height: 3px;
+    background-color: #a86104;
+    margin: 0 auto 10px;
+  }
+  
+
+  .slider-container3 {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Altura fija para el slider */
+    margin-bottom: 30px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .slider-container4 {
+    position: relative;
+    width: 800px;
+    height: 400px; /* Altura fija para el slider */
+    margin-bottom: 30px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .slider3 {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide3 {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Espacio alrededor de la imagen */
+  }
+  
+  .imagen-proyecto3 {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Muestra la imagen completa */
+    object-position: center;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  
+  /* Info del proyecto */
+  .info-proyecto {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+
+  .info-proyecto2 {
+    display:flex;
+    gap: 40px;
+    margin: 40px;
+    
+  }
+  
+  .texto-proyecto {
+    flex: 2;
+  }
+  
+  .titulo-proyecto {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .titulo-proyecto2 {
+    font-size: 1.8rem;
+    color: #f5f5f5;
+    margin-bottom: 20px;
+  }
+
+  .titulo-proyecto3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #f5f5f5;
+    margin-bottom: 20px;
+  }
+  
+  .descripcion-proyecto {
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .descripcion-proyecto2 {
+    line-height: 1.6;
+    color: #f5f5f5;
+  }
+  
+  .ficha-tecnica {
+    flex: 1;
+    background: #f5f5f5;
+    padding: 20px;
+    max-height: 320px;
+    border-radius: 8px;
+  }
+  
+  .ficha-item {
+    margin-bottom: 15px;
+  }
+  
+  .ficha-titulo {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Grid de proyectos */
+  .grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .proyecto-miniatura {
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .proyecto-miniatura:hover {
+    transform: scale(1.03);
+  }
+  
+  .proyecto-miniatura img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .info-proyecto {
+      flex-direction: column;
+    }
+    
+    .imagen-proyecto {
+      height: 350px;
+    }
+    
+    .grid-proyectos {
+      grid-template-columns: 1fr;
+    }
+  }
+
+/* Botones */
+.slider-btn3 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.slider-btn3:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.prev3 {
+  left: 20px;
+}
+
+.next3 {
+  right: 20px;
+}
+
+/* Indicadores (opcional) */
+.slider-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+}
+
+.dot.active {
+  background: white;
+}
+

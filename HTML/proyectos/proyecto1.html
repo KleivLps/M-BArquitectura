@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Menú de navegación -->
+
+    <!-- Navbar estática -->
+    <nav id="navbar-estatica">
+      <div class="contenido-navbar">
+        <!-- Nombre de la página y enlace a inicio -->
+        <div class="nombre-pagina">
+          <a href="/index.html">M&B Arquitectura</a>
+        </div>
+
+        <!-- Número de celular -->
+        <div class="info-contacto">
+          <i class="fas fa-phone"></i>
+          <!-- Icono de teléfono -->
+          <span>(+51) 976 277 253</span>
+        </div>
+
+        <!-- Escríbenos (correo) -->
+        <div class="info-contacto" id="escribenos-btn">
+          <i class="fas fa-envelope"></i>
+          <!-- Icono de correo -->
+          <span>Escríbenos</span>
+        </div>
+
+        <!-- WhatsApp -->
+        <div class="info-contacto">
+          <i class="fab fa-whatsapp"></i>
+          <!-- Icono de WhatsApp -->
+          <a href="https://wa.me/51976277253" target="_blank">WhatsApp</a>
+        </div>
+
+        <!-- Dirección (Perú) -->
+        <div class="info-contacto">
+          <i class="fas fa-map-marker-alt"></i>
+          <!-- Icono de dirección -->
+          <span>Perú</span>
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="redes-sociales">
+          <a href="https://instagram.com" target="_blank">
+            <i class="fab fa-instagram"></i>
+            <!-- Icono de Instagram -->
+          </a>
+          <a href="https://tiktok.com" target="_blank">
+            <i class="fab fa-tiktok"></i>
+            <!-- Icono de TikTok -->
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <i class="fab fa-facebook"></i>
+            <!-- Icono de Facebook -->
+          </a>
+          <a href="https://linkedin.com" target="_blank">
+            <i class="fab fa-linkedin"></i>
+            <!-- Icono de LinkedIn -->
+          </a>
+          <a href="https://youtube.com" target="_blank">
+            <i class="fab fa-youtube"></i>
+            <!-- Icono de YouTube -->
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modal para el formulario -->
+    <div id="modal-formulario" class="modal">
+      <div class="modal-contenido">
+        <span class="cerrar-modal">&times;</span>
+        <h2 class="texto-formulario">Escribenos</h2>
+        <form id="formulario-contacto">
+          <label class="texto-formulario" for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
+
+          <label class="texto-formulario" for="correo"
+            >Correo electrónico:</label
+          >
+          <input type="email" id="correo" name="correo" required />
+
+          <label class="texto-formulario" for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono" required />
+
+          <label class="texto-formulario" for="asunto">Asunto:</label>
+          <input type="text" id="asunto" name="asunto" required />
+
+          <label class="texto-formulario" for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Fondo oscurecido -->
+    <div id="fondo-oscuro" class="fondo-oscuro"></div>
+
+
+    <!-- NAVBAR -->
+
+    <header class="header">
+      <nav class="nav">
+          <a href="index.html" class="logo nav-link">
+              <img src="/images/Logo/blanco-transparente3.png" class="logo nav-link" width="60px" alt="logo">
+              <img src="/images/Logo/blanco-transparente 2.png" class="logo nav-link" width="90px" alt="logo">
+          </a>
+          <button class="nav-boton" aria-label="Abrir menú">
+              <i class="fa-solid fa-bars"></i>
+          </button>
+          <ul class="nav-list" aria-label="Menú de navegación">
+              <li class="listas">
+                  <a href="/index.html" title="Ir a la página de inicio" class="menu nav-link menu_active">Inicio</a>
+                  <a href="/index.html" title="Ir a la página de inicio" class="menu punto">|</a>
+              </li>
+              <li class="listas">
+                  <a href="/HTML/proyectos.html" title="Ir a la página de Proyectos" class="menu nav-link">Proyectos</a>
+                  <a href="/HTML/proyectos.html" title="Ir a la página de Proyectos" class="menu punto">|</a>
+              </li>
+              <li class="listas">
+                  <a href="/HTML/servicios.html" title="Ir a la página de Servicios" class="menu nav-link">Servicios</a>
+                  <a href="/HTML/servicios.html" title="Ir a la página de Servicios" class="menu punto">|</a>
+              </li>
+              <li class="listas">
+                  <a href="/HTML/acerca-de.html" title="Ir a la página de Nosotros" class="menu nav-link">Nosotros</a>
+                  <a href="/HTML/acerca-de.html" title="Ir a la página de Nosotros" class="menu punto">|</a>
+              </li>
+              <li class="listas">
+                  <a href="/HTML/contacto.html" title="Ir a la página de Artículos" class="menu nav-link">Contacto</a>
+                  <a href="/HTML/contacto.html" title="Ir a la página de Artículos" class="menu punto">|</a>
+              </li>
+          </ul>
+      </nav>
+  </header>
+   
+    <header class="base2 seccion-animada">
+        <nav class="content headere">
+          <h2 class="titulo-indice">CASA LOZA</h2>
+          <ul class="salid">
+          <li class="retiro">
+            <a href="/index.html">INICIO</a>
+          </li>
+          <li class="retiro">/</li>
+          <li class="retiro">
+            <a href="/HTML/proyectos.html">PROYECTOS</a>
+          </li>
+          <li class="retiro">/</li>
+          <li class="retiro">CASA LOZA</li>
+        </ul>
+      </nav>
+    </header>
+      
+      
+        <!-- Slider principal -->
+        <div class="proyecto-destacado seccion-animada">
+            <div class="slider-container3">
+              <div class="slider3">
+                <div class="slide3 active3">
+                  <img src="/images/proyectos/proyecto1/CASA URBANA CARHUAZ.png" alt="fachada-carhuaz" title="Elevación-carhuaz" class="imagen-proyecto3">
+                </div>
+                <div class="slide3">
+                  <img src="/images/proyectos/proyecto1/Interior-catac.png" alt="Interior-carhuaz" title="Interior-carhuaz" class="imagen-proyecto3">
+                </div>
+                <div class="slide3">
+                  <img src="/images/proyectos/proyecto1/Sala-catac.png" alt="Sala-carhuaz" title="Sala-carhuaz" class="imagen-proyecto3">
+                </div>
+              </div>
+              
+              <!-- Botones de navegación -->
+              <button class="slider-btn3 prev3" aria-label="Anterior">&#10094;</button>
+              <button class="slider-btn3 next3" aria-label="Siguiente">&#10095;</button>
+            </div>
+      
+          <div class="info-proyecto">
+            <div class="texto-proyecto">
+              <h3 class="titulo-proyecto2">CASA LOZA - CARHUAZ</h3>
+              <p class="parrafo-nosotros3">La Casa Loza Carhuaz es un proyecto residencial diseñado para fusionar la modernidad con el contexto natural de la ciudad. Se encuentra en un entorno urbano con vistas a la cordillera, lo que permitió integrar elementos arquitectónicos que aprovechan al máximo la iluminación natural y la ventilación.
+              </p>
+
+                <p class="parrafo-nosotros3">
+
+                Es una vivienda de diseño contemporáneo, con un enfoque en líneas rectas y volúmenes geométricos. La combinación de madera, concreto y vidrio aporta una estética sofisticada y funcional. Elementos como balcones con barandillas de vidrio y detalles en colores cálidos generan un contraste elegante, mientras que la vegetación en las terrazas superiores añade frescura al conjunto.
+              </p>
+
+                <p class="parrafo-nosotros3">
+                
+                El diseño interior mantiene una línea moderna y minimalista, con materiales naturales y acabados en tonos cálidos. El dormitorio incluye un gran ventanal que permite la entrada de luz natural, además de vistas al exterior. La distribución del mobiliario está pensada para optimizar el espacio y brindar comodidad. Un escritorio ergonómico y una silla de diseño moderno indican un área funcional para el trabajo o estudio.
+
+              </p>
+
+                <p class="parrafo-nosotros3">
+                
+                Una sala de estar diseñada con un concepto abierto. Los tonos neutros en paredes y mobiliario refuerzan la sensación de amplitud y luminosidad. Se han integrado ventanales amplios que permiten la conexión con el exterior y facilitan la entrada de luz natural. El mobiliario es funcional, con un sofá en forma de L y un centro de entretenimiento que aporta un ambiente acogedor y moderno.
+              </p>
+
+                
+
+
+                <h3 class="titulo-proyecto3">Requerimientos del Cliente</h3>
+                <p class="parrafo-nosotros3">
+                El cliente, Juan Loza Camana, buscaba una vivienda que combinara modernidad y funcionalidad sin perder la esencia arquitectónica de la zona. Su visión era contar con un hogar espacioso y bien iluminado, optimizando el uso del terreno y asegurando una integración armónica con el entorno urbano de Carhuaz.
+              </p>
+
+               
+                
+                <h3 class="titulo-proyecto3">Distribución de Espacios</h3>
+                <p class="parrafo-nosotros3">
+                Desde el inicio, el cliente expresó su deseo de contar con una distribución eficiente y acogedora para su familia. Solicitó dos habitaciones para sus hijos, cada una con suficiente espacio para estudio y almacenamiento. Además, pensó en la comodidad de sus visitas, por lo que se incluyó una habitación adicional para huéspedes. La casa debía incluir una sala de estar amplia donde la familia pudiera reunirse, así como una terraza que aprovechara las vistas hacia el paisaje natural circundante.
+              </p>
+
+              
+                
+               <h3 class="titulo-proyecto3">Diseño Exterior y Arquitectura</h3>
+               <p class="parrafo-nosotros3">
+                En términos estéticos, el cliente deseaba una fachada moderna, pero con materiales que reflejaran un equilibrio entre lo natural y lo urbano. Por ello, se optó por una combinación de madera, concreto y vidrio, integrando detalles en colores cálidos para dar un aspecto acogedor. La estructura geométrica y los balcones con barandillas de vidrio fueron incorporados para maximizar la entrada de luz natural y generar una sensación de amplitud.
+              </p>
+
+             
+                
+                <h4 class="titulo-proyecto3">Interiores y Confort</h4>
+                <p class="parrafo-nosotros3">
+                El dormitorio principal debía ser un espacio de descanso, con un diseño limpio y elegante, por lo que se optó por acabados en tonos neutros y mobiliario de líneas modernas. Para los hijos, se diseñaron espacios multifuncionales que incluyeran áreas de estudio, asegurando así un ambiente propicio para el aprendizaje.
+              </p>
+
+                <p class="parrafo-nosotros3">
+                
+                La sala de estar debía ser un punto de encuentro para la familia, por lo que el cliente pidió un diseño con una distribución abierta. Los grandes ventanales permiten la conexión con el exterior y refuerzan la sensación de amplitud, mientras que los muebles fueron seleccionados para brindar confort y funcionalidad.
+              
+              </p>
+            </div>
+      
+            <div class="ficha-tecnica">
+              <div class="ficha-item">
+                <span class="ficha-titulo">Cliente:</span>
+                <span class="ficha-valor">Juan Loza Camana</span>
+              </div>
+              <div class="ficha-item">
+                <span class="ficha-titulo">Año:</span>
+                <span class="ficha-valor">2020</span>
+              </div>
+              <div class="ficha-item">
+                <span class="ficha-titulo">Tipo:</span>
+                <span class="ficha-valor">Residencial</span>
+              </div>
+              <div class="ficha-item">
+                <span class="ficha-titulo">Estado:</span>
+                <span class="ficha-valor">Completado</span>
+              </div>
+              <div class="ficha-item">
+                <span class="ficha-titulo">Dirección:</span>
+                <span class="ficha-valor">Jr.Amazonas s/n,Carhuaz</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <section class="articulos">
+            
+            <div class="slider">
+              <div class="slider-container">
+                <!-- Tarjeta 1 -->
+                <div class="tarjeta" onclick="window.location.href='/HTML/proyectos/proyecto1.html';">
+                  <img src="/images/proyectos/proyecto1/CASA URBANA CARHUAZ.png" alt="Imagen del artículo 1">
+                  <h3>CASA LOZA - CARHUAZ</h3>
+                  <p>El principal concepto para el diseño fue intentar unir lo urbano con lo rural.</p>
+                </div>
+                <!-- Tarjeta 2 -->
+                <div class="tarjeta" onclick="window.location.href='/HTML/proyectos/proyecto2.html';">
+                  <img src="/images/proyectos/proyecto2/fachada-piura.png" alt="Imagen del artículo 2">
+                  <h3>CASA ROJAS - PIURA</h3>
+                  <p>Vivienda diseñada para una familia nuclear, el cliente queria algo simple pero conciso.</p>
+                </div>
+                <!-- Tarjeta 3 -->
+                <div class="tarjeta" onclick="window.location.href='/HTML/proyectos/proyecto3.html';">
+                  <img src="/images/proyectos/proyecto3/oficina.png" alt="Imagen del artículo 3">
+                  <h3>REMODELACION OFICINA - SURCO</h3>
+                  <p>Remodelacion del interior de una oficina en surco.</p>
+                </div>
+                <!-- Tarjeta 4 -->
+                <div class="tarjeta" onclick="window.location.href='/HTML/proyectos/proyecto4.html';">
+                  <img src="/images/proyectos/proyecto4/Fachada-carabayllo.png" alt="Imagen del artículo 4">
+                  <h3>VIVIENDA MULTIFAMILIAR MILLA - CARABAYLLO</h3>
+                  <p>Vivienda diseñada para la convivencia de 2 familias generacionales.</p>
+                </div>
+                <!-- Tarjeta 5 -->
+                <div class="tarjeta" onclick="window.location.href='/HTML/proyectos/proyecto5.html';">
+                  <img src="/images/proyectos/proyecto5/fachada-arequipa.png" alt="Imagen del artículo 5">
+                  <h3>CASA ABRIL - AREQUIPA</h3>
+                  <p>Vivivenda diseñada como una fusion rural/urbana añadiendo metodos de construccion tradicional.</p>
+                </div>
+        
+              </div>
+              <!-- Botones de navegación del slider -->
+              <button class="slider-btn prev" onclick="moverSlider(-1)">&#10094;</button>
+              <button class="slider-btn next" onclick="moverSlider(1)">&#10095;</button>
+            </div>
+          </section>
+      
+          <section class="espacio-servicios2">
+            <div class="contenido-servicios2">
+                <a href="/HTML/servicios.html">
+                <button id="escribenos-btn-servicios" class="boton-proyectos2">visualiza Nuestros Servicios >></button>
+              </a>
+            </div>
+        </section>
+        </section>
+  </body>
+
+      <footer>
+        <div class="contenedor-footer">
+          <!-- Primera columna: Logo y descripción -->
+          <div class="columna">
+            <div class="logo-footer">
+              <img src="/images/Logo/blanco-transparente3.png" alt="Logo de la empresa" />
+              <!-- Cambia "logo.png" por la ruta de tu logo -->
+              <img src="/images/Logo/blanco-transparente 2.png" alt="Logo de la empresa" />
+            </div>
+            <p class="descripcion-empresa">
+              Somos una empresa dedicada a brindar soluciones innovadoras y de
+              alta calidad para nuestros clientes.
+            </p>
+            <button id="escribenos-btn-footer" class="boton-escribenos">Escríbenos >></button>
+          </div>
+  
+          <!-- Segunda columna: Menú de servicios -->
+          <div class="columna">
+            <h3>Servicios</h3>
+            <ul class="menu-servicios">
+              <li><a href="#servicios">Servicio 1</a></li>
+              <li><a href="#servicios">Servicio 2</a></li>
+              <li><a href="#servicios">Servicio 3</a></li>
+              <li><a href="#servicios">Servicio 4</a></li>
+            </ul>
+          </div>
+  
+          <!-- Tercera columna: Contacto y redes sociales -->
+          <div class="columna">
+            <h3>Contacto</h3>
+            <ul class="redes">
+              <div class="social2">
+                <div class="social-icons-footer redes">
+                  <a href="https://instagram.com" class="fab fa-instagram" title="Instagram"></a>
+                  <a href="https://facebook.com" class="fab fa-facebook" title="Facebook"></a>
+                  <a href="https://linkedin.com" class="fab fa-linkedin" title="LinkedIn"></a>
+                  <a href="https://tiktok.com" class="fa-brands fa-tiktok" title="Tiktok"></a>
+                  <a href="https://youtube.com" class="fab fa-youtube" title="Youtube"></a>
+                </div>
+              </div>
+              </ul>
+             
+            <ul class="contacto">
+              <li>
+                <a href="https://wa.me/1234567890" target="_blank"
+                  >WhatsApp: +123 456 7890</a
+                >
+              </li>
+              <li>
+                <a href="mailto:info@empresa.com">Correo: info@empresa.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Derechos reservados y mapa del sitio -->
+        <div class="derechos-reservados">
+          <p>&copy; 2025 M&B Arquitectura. Todos los derechos reservados.</p>
+          <a href="mapa-del-sitio.html">Mapa del Sitio</a>
+          <!-- Cambia "mapa-del-sitio.html" por la ruta de tu página de mapa del sitio -->
+        </div>
+      </footer>
+  
+      <script src="/scripsts/scipts.js"></script>
+    </body>
+  </html>
+  
+
+
+
+
+

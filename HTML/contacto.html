@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Página Web</title>
+  <link rel="stylesheet" href="/styles/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Menú de navegación -->
+
+  <!-- Navbar estática -->
+  <nav id="navbar-estatica">
+    <div class="contenido-navbar">
+      <!-- Nombre de la página y enlace a inicio -->
+      <div class="nombre-pagina">
+        <a href="/index.html">M&B Arquitectura</a>
+      </div>
+
+      <!-- Número de celular -->
+      <div class="info-contacto">
+        <i class="fas fa-phone"></i>
+        <!-- Icono de teléfono -->
+        <span>(+51) 976 277 253</span>
+      </div>
+
+      <!-- Escríbenos (correo) -->
+      <div class="info-contacto" id="escribenos-btn">
+        <i class="fas fa-envelope"></i>
+        <!-- Icono de correo -->
+        <span>Escríbenos</span>
+      </div>
+
+      <!-- WhatsApp -->
+      <div class="info-contacto">
+        <i class="fab fa-whatsapp"></i>
+        <!-- Icono de WhatsApp -->
+        <a href="https://wa.me/51976277253" target="_blank">WhatsApp</a>
+      </div>
+
+      <!-- Dirección (Perú) -->
+      <div class="info-contacto">
+        <i class="fas fa-map-marker-alt"></i>
+        <!-- Icono de dirección -->
+        <span>Perú</span>
+      </div>
+
+      <!-- Redes sociales -->
+      <div class="redes-sociales">
+        <a href="https://instagram.com" target="_blank">
+          <i class="fab fa-instagram"></i>
+          <!-- Icono de Instagram -->
+        </a>
+        <a href="https://tiktok.com" target="_blank">
+          <i class="fab fa-tiktok"></i>
+          <!-- Icono de TikTok -->
+        </a>
+        <a href="https://facebook.com" target="_blank">
+          <i class="fab fa-facebook"></i>
+          <!-- Icono de Facebook -->
+        </a>
+        <a href="https://linkedin.com" target="_blank">
+          <i class="fab fa-linkedin"></i>
+          <!-- Icono de LinkedIn -->
+        </a>
+        <a href="https://youtube.com" target="_blank">
+          <i class="fab fa-youtube"></i>
+          <!-- Icono de YouTube -->
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Modal para el formulario -->
+  <div id="modal-formulario" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar-modal">&times;</span>
+      <h2 class="texto-formulario">Escribenos</h2>
+      <form id="formulario-contacto">
+        <label class="texto-formulario" for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label class="texto-formulario" for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required />
+
+        <label class="texto-formulario" for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required />
+
+        <label class="texto-formulario" for="asunto">Asunto:</label>
+        <input type="text" id="asunto" name="asunto" required />
+
+        <label class="texto-formulario" for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Fondo oscurecido -->
+  <div id="fondo-oscuro" class="fondo-oscuro"></div>
+
+
+  <!-- NAVBAR -->
+
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="logo nav-link">
+        <img src="/images/Logo/blanco-transparente3.png" class="logo nav-link" width="60px" alt="logo">
+        <img src="/images/Logo/blanco-transparente 2.png" class="logo nav-link" width="90px" alt="logo">
+      </a>
+      <button class="nav-boton" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-list" aria-label="Menú de navegación">
+        <li class="listas">
+          <a href="/index.html" title="Ir a la página de inicio" class="menu nav-link menu_active">Inicio</a>
+          <a href="/index.html" title="Ir a la página de inicio" class="menu punto">|</a>
+        </li>
+        <li class="listas">
+          <a href="/HTML/proyectos.html" title="Ir a la página de Proyectos" class="menu nav-link">Proyectos</a>
+          <a href="/HTML/proyectos.html" title="Ir a la página de Proyectos" class="menu punto">|</a>
+        </li>
+        <li class="listas">
+          <a href="/HTML/servicios.html" title="Ir a la página de Servicios" class="menu nav-link">Servicios</a>
+          <a href="/HTML/servicios.html" title="Ir a la página de Servicios" class="menu punto">|</a>
+        </li>
+        <li class="listas">
+          <a href="/HTML/acerca-de.html" title="Ir a la página de Nosotros" class="menu nav-link">Nosotros</a>
+          <a href="/HTML/acerca-de.html" title="Ir a la página de Nosotros" class="menu punto">|</a>
+        </li>
+        <li class="listas">
+          <a href="/HTML/contacto.html" title="Ir a la página de Artículos" class="menu nav-link">Contacto</a>
+          <a href="/HTML/contacto.html" title="Ir a la página de Artículos" class="menu punto">|</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <header class="base2 ">
+    <nav class="content headere seccion-animada">
+      <h2 class="titulo-indice">CONTACTO</h2>
+      <ul class="salid">
+        <li class="retiro">
+          <a href="/index.html">INICIO</a>
+        </li>
+        <li class="retiro">/</li>
+        <li class="retiro">CONTACTO</li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección Servicios -->
+  <section id="servicios" class="seccion-animada">
+    <p class="parrafo-nosotros4">
+      Contacta con nosotros para obtener más información sobre nuestros
+      servicios, tarifas y disponibilidad. Estamos aquí para ayudarte a hacer realidad tus
+      proyectos de construcción y diseño arquitectónico.
+
+    </p>
+
+    <section class="flex-contacto">
+
+      <div id="modal-formulario" class="modal1">
+        <div class="modal-contenido">
+         
+          <h2 class="titulo-nosotros2">Escríbenos</h2>
+          <p class="parrafo-nosotros4">
+            Rellena el siguiente formulario y nos comunicaremos contigo lo más pronto posible. Valoramos tu consulta.
+
+          </p>
+          <form id="formulario-contacto">
+            <label class="texto-formulario" for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required />
+
+            <label class="texto-formulario" for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required />
+
+            <label class="texto-formulario" for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required />
+
+            <label class="texto-formulario" for="asunto">Asunto:</label>
+            <input type="text" id="asunto" name="asunto" required />
+
+            <label class="texto-formulario" for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="social3">
+        <div class="redes2">
+
+            <div class="info-contacto2">
+              <i class="titulo-nosotros6 fas fa-map-marker-alt"></i>
+              <!-- Icono de dirección -->
+              <h2 class="titulo-nosotros6">LIMA,PERU</h2>
+            </div>
+
+            <div class="info-contacto2">
+            <i class="titulo-nosotros6 fas fa-phone"></i>
+            <a class="noref" href="https://wa.me/51976277253">
+              <h2 class="titulo-nosotros6">+51 976 277 253</h2>
+            </a>
+
+          </div>
+          <div class="info-contacto2">
+            <i class="titulo-nosotros6 fas fa-envelope"></i>
+            <h2 class="titulo-nosotros6">mbarquitectura@gmail.com</h2>
+          </div>
+
+          
+          <a href="https://instagram.com" class="complet fab fa-instagram" data-title="Instagram"></a>
+          <a href="https://facebook.com" class="complet fab fa-facebook" data-title="Facebook"></a>
+          <a href="https://linkedin.com" class="complet fab fa-linkedin" data-title="LinkedIn"></a>
+          <a href="https://tiktok.com" class="complet fa-brands fa-tiktok" data-title="Tiktok"></a>
+          <a href="https://youtube.com" class="complet fab fa-youtube" data-title="YouTube"></a>
+        </div>
+      </div>
+    </section>
+  </section>
+
+
+
+
+
+  <footer>
+    <div class="contenedor-footer">
+      <!-- Primera columna: Logo y descripción -->
+      <div class="columna">
+        <div class="logo-footer">
+          <img src="/images/Logo/blanco-transparente3.png" alt="Logo de la empresa" />
+          <!-- Cambia "logo.png" por la ruta de tu logo -->
+          <img src="/images/Logo/blanco-transparente 2.png" alt="Logo de la empresa" />
+        </div>
+        <p class="descripcion-empresa">
+          Somos una empresa dedicada a brindar soluciones innovadoras y de
+          alta calidad para nuestros clientes.
+        </p>
+        <button id="escribenos-btn-footer" class="boton-escribenos">Escríbenos >></button>
+      </div>
+
+      <!-- Segunda columna: Menú de servicios -->
+      <div class="columna">
+        <h3>Servicios</h3>
+        <ul class="menu-servicios">
+          <li><a href="#servicios">Servicio 1</a></li>
+          <li><a href="#servicios">Servicio 2</a></li>
+          <li><a href="#servicios">Servicio 3</a></li>
+          <li><a href="#servicios">Servicio 4</a></li>
+        </ul>
+      </div>
+
+      <!-- Tercera columna: Contacto y redes sociales -->
+      <div class="columna">
+        <h3>Contacto</h3>
+        <ul class="redes">
+          <div class="social2">
+            <div class="social-icons-footer redes">
+              <a href="https://instagram.com" class="fab fa-instagram" title="Instagram"></a>
+              <a href="https://facebook.com" class="fab fa-facebook" title="Facebook"></a>
+              <a href="https://linkedin.com" class="fab fa-linkedin" title="LinkedIn"></a>
+              <a href="https://tiktok.com" class="fa-brands fa-tiktok" title="Tiktok"></a>
+              <a href="https://youtube.com" class="fab fa-youtube" title="Youtube"></a>
+            </div>
+          </div>
+        </ul>
+
+        <ul class="contacto">
+          <li>
+            <a href="https://wa.me/1234567890" target="_blank">WhatsApp: +123 456 7890</a>
+          </li>
+          <li>
+            <a href="mailto:info@empresa.com">Correo: info@empresa.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Derechos reservados y mapa del sitio -->
+    <div class="derechos-reservados">
+      <p>&copy; 2025 M&B Arquitectura. Todos los derechos reservados.</p>
+      <a href="mapa-del-sitio.html">Mapa del Sitio</a>
+      <!-- Cambia "mapa-del-sitio.html" por la ruta de tu página de mapa del sitio -->
+    </div>
+  </footer>
+
+  <script src="/scripsts/scipts.js"></script>
+</body>
+
+</html>
