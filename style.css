@@ -404,7 +404,7 @@ body {
 
 .headere {
   height: 15vh !important;
-  background: linear-gradient(rgba(0,0,0,var(--opacidad-negro)), rgba(0,0,0,var(--opacidad-negro))), url(/images/IaKrea/corte1c.png) no-repeat center;
+  background: linear-gradient(rgba(0,0,0,var(--opacidad-negro)), rgba(0,0,0,var(--opacidad-negro))), url(./images/IaKrea/corte1c.png) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   --opacidad-negro:0.4;
