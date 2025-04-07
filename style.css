@@ -1,12 +1,12 @@
-@import url(/styles/Navbar.css);
-@import url(/styles/Footer.css);
-@import url(/styles/Images.css);
-@import url(/styles/Formulario.css);
-@import url(/styles/Grid.css);
-@import url(/styles/tarjeta.css);
-@import url(/styles/nosotros.css);
-@import url(/styles/proyecto1.css);
-@import url(/styles/slider.css);
+@import url(Navbar.css);
+@import url(Footer.css);
+@import url(Images.css);
+@import url(Formulario.css);
+@import url(Grid.css);
+@import url(tarjeta.css);
+@import url(nosotros.css);
+@import url(proyecto1.css);
+@import url(slider.css);
 
 /* Estilos generales */
 body {
