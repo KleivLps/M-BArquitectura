@@ -1,0 +1,10 @@
+section {
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  .seccion-animada.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

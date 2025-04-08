@@ -1,0 +1,74 @@
+.espacio-servicios,
+.espacio-servicios2 {
+  background-color: var(--color-fondo-claro);
+  padding: 20px;
+  text-align: center;
+}
+
+.contenido-servicios,
+.contenido-servicios2 {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contenido-servicios p {
+  font-size: 1.8em;
+  color: var(--color-texto-principal);
+  margin: 0;
+}
+
+
+/*****************************************/
+
+/* Estilos para el espacio de servicios */
+.espacio-servicios {
+    height: 100px; /* Altura fija */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9; /* Fondo claro */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  
+  .contenido-servicios {
+    max-width: 800px; /* Ancho máximo del contenido */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre el texto y el botón */
+  }
+  
+  .contenido-servicios p {
+    font-size: 1.8em;
+    color: #333; /* Color del texto */
+    margin: 0; /* Eliminar margen por defecto */
+  }
+  
+  
+  
+  .espacio-servicios2 {
+      display: flex;
+      align-items: center; /* Centra verticalmente */
+      justify-content: center; /* Centra horizontalmente */
+      background-color: #f9f9f9; /* Fondo claro */
+      padding: 20px;
+      text-align: center; /* Centra el texto dentro del botón */
+    }
+  
+    .contenido-servicios2 {
+      max-width: 800px; /* Ancho máximo del contenido */
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center; /* Centra horizontalmente */
+      gap: 20px; /* Espacio entre el texto y el botón */
+    }
+    
+  

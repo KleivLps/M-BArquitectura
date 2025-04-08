@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+
 /* Contenedor principal de las tarjetas */
 .tarjeta-nosotros {
   display: flex;

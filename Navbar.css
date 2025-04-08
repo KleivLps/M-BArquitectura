@@ -1,220 +1,54 @@
-/*Nav bar*/
-/* Estilos generales para la navbar */
-
-body {
-  padding-top: 60px; /* Ajusta este valor según la altura de tu navbar */
-}
-/* Ajusta la posición de la navbar para que esté debajo de la barra estática */
-.header {
-  background-color: #250902;
-  height: 60px;
+/* ===== NAVBAR ESTÁTICA ===== */
+#navbar-estatica {
   position: fixed;
-  width: 100%;
+  top: 0;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
-  font-style: normal;
-  top: 50px; /* Debajo de la barra estática */
+    font-style: normal;
   left: 0;
-  box-shadow: 0 2px 5px #a86104;
-  z-index: 999; /* Debajo de la barra estática */
+  width: 100%;
+  background: var(--color-fondo-principal);
+  color: var(--color-texto-claro);
+  padding: 8px 20px;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+  height: auto;
+  min-height: 30px;
 }
 
-.nav {
+.contenido-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  gap: 15px;
 }
 
-/* Estilos para el logo */
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  height: auto;
-}
-
-/* Estilos para la lista de navegación */
-.nav-list {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.listas {
-  font-size: 18px;
-  margin: 0 10px;
-  line-height: 65px;
-}
-
-.menu {
-  padding: 8px 12px;
-  border-radius: 4px;
-  color: white;
-  text-decoration: none;
-}
-
-.menu:hover {
-  color: #a86104;
-}
-
-.punto {
-  color: #a86104;
-  font-size: 30px;
-}
-
-/* Estilos para el botón de menú en dispositivos móviles */
-.nav-boton {
-  display: none; /* Oculto por defecto */
-  color: #fff;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-  .nav-boton {
-      display: block; /* Mostrar el botón en pantallas pequeñas */
-  }
-
-  .nav-list {
-      display: none; /* Ocultar la lista por defecto */
-      flex-direction: column;
-      position: absolute;
-      top: 60px; /* Debajo de la barra de navegación */
-      left: 0;
-      width: 100%;
-      background-color: #000000;
-      padding: 10px 0;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      z-index: 998;
-      transform: translateY(-100%); /* Ocultar el menú fuera de la pantalla */
-      transition: transform 0.3s ease; /* Animación suave */
-  }
-
-  .nav-list.visible {
-      display: flex; /* Mostrar la lista cuando tenga la clase "visible" */
-      transform: translateY(0); /* Mostrar el menú */
-  }
-
-  .listas {
-      width: 100%;
-      text-align: center;
-      margin: 0;
-      line-height: 50px;
-  }
-
-  .menu {
-      width: 100%;
-      padding: 10px;
-  }
-
-  .punto {
-      display: none; /* Ocultar los separadores "|" en móviles */
-  }
-}
-
-/*****************************************/
-
-  /*navbar estatica*/
-
-  /* Estilos para la navbar estática */
-  #navbar-estatica {
-    position: fixed;
-    top: 0;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    left: 0;
-    width: 100%;
-    background-color: #121212; /* Color de fondo */
-    color: white;
-    padding: 0px 20px;
-    z-index: 1000; /* Asegura que esté encima de todo */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: opacity 0.2s ease; /* Transición suave */
-    height: 20px; /* Altura fija para la navbar estática */
-}
-
-/* Contenedor de la navbar estática */
-.contenido-navbar {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin: 0 auto;
-}
-
-/* Nombre de la página */
 .nombre-pagina a {
-  color: white;
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
+  color: var(--color-texto-claro);
   text-decoration: none;
   font-size: 0.8em;
-  font-weight: bold;
+  white-space: nowrap;
   margin-right: 20px;
 }
 
-/* Información de contacto */
 .info-contacto {
   display: flex;
   align-items: center;
+  gap: 15px;
   margin-right: 20px;
-  font-size: 0.8em;
-}
-
-.info-contacto i {
-  margin-right: 5px;
-}
-
-.info-contacto a {
-  color: white;
-  text-decoration: none;
-}
-
-/* Redes sociales */
-.redes-sociales {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto; /* Alinea a la derecha */
-}
-
-.redes-sociales a {
-  color: white;
-  text-decoration: none;
-  margin-left: 15px;
-  font-size: 0.8em;
-  transition: color 0.3s ease;
-}
-
-.redes-sociales a:hover {
-  color: #a86104; /* Cambia el color al pasar el mouse */
-}
-
-
-/* Estilos para las opciones de la navbar estática */
-.info-contacto {
-  display: flex;
-  align-items: center;
+  font-size: clamp(0.6rem, 1.8vw, 0.8rem);
   margin-right: 20px;
-  font-size: 0.8em;
   cursor: pointer; /* Cambia el cursor a una manito */
   position: relative; /* Necesario para el subrayado */
 }
 
-/* Subrayado al pasar el mouse */
 .info-contacto::after {
   content: '';
   position: absolute;
@@ -222,7 +56,7 @@ body {
   bottom: -2px; /* Ajusta la posición del subrayado */
   width: 100%;
   height: 2px;
-  background-color: #a86104; /* Color del subrayado */
+  background-color: var(--color-boton-naranja); /* Color del subrayado */
   transform: scaleX(0); /* Inicialmente oculto */
   transform-origin: bottom right;
   transition: transform 0.3s ease; /* Transición suave */
@@ -231,6 +65,35 @@ body {
 .info-contacto:hover::after {
   transform: scaleX(1); /* Muestra el subrayado */
   transform-origin: bottom left;
+}
+
+.info-contacto i {
+  margin-right: 5px;
+}
+
+.info-contacto a {
+  color: var(--color-texto-claro);
+  text-decoration: none;
+}
+
+.redes-sociales {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto; /* Alinea a la derecha */
+}
+
+.redes-sociales a {
+  color: var(--color-texto-claro);
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 0.8em;
+  transition: color 0.3s ease;
+}
+
+.redes-sociales a:hover {
+  color: var(--color-boton-naranja); /* Cambia el color al pasar el mouse */
 }
 
 .info-contacto2 {
@@ -263,4 +126,187 @@ body {
 /* Estilos específicos para "Escríbenos" */
 #escribenos-btn {
   cursor: pointer; /* Cambia el cursor a una manito */
+}
+
+/* Responsive Navbar Estática */
+@media (max-width: 768px) {
+  #navbar-estatica {
+    padding: 6px 15px;
+  }
+  
+  .contenido-navbar {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+  
+  .nombre-pagina {
+    order: 1;
+    flex: 1 1 100%;
+    text-align: center;
+  }
+  
+  .info-contacto {
+    order: 2;
+    flex: 1;
+    justify-content: center;
+  }
+  
+  .redes-sociales {
+    order: 3;
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .info-contacto {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .redes-sociales a {
+    margin-left: 0;
+  }
+}
+
+/* ===== NAVBAR PRINCIPAL ===== */
+.header {
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  background-color: var(--color-fondo-header);
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  height: 60px;
+  left: 0;
+  z-index: 1000;
+  transition: top 0.3s ease;
+  box-shadow: 0 2px 5px var(--color-boton-naranja);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: auto;
+}
+
+.nav-list {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.listas {
+  line-height: 60px;
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+.menu {
+  color: var(--color-texto-claro);
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  transition: color 0.3s ease;
+}
+
+.menu:hover {
+  color: var(--color-sombra-header);
+}
+
+.punto {
+  color: var(--color-sombra-header);
+  font-size: 30px;
+}
+
+.nav-boton {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-texto-claro);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+
+
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .nav-boton {
+      display: block; /* Mostrar el botón en pantallas pequeñas */
+  }
+
+  .nav-list {
+    position: fixed;
+    top: 130px;
+    left: 0;
+    width: 100%;
+    background: #250902;
+    flex-direction: column;
+    align-items: center;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    padding: 0;
+  }
+
+  .nav-list.visible {
+      display: flex; /* Mostrar la lista cuando tenga la clase "visible" */
+      transform: translateY(0); /* Mostrar el menú */
+      height: calc(70vh - 70px);
+    padding: 20px 0;
+  }
+
+  .listas {
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      line-height: 50px;
+  }
+
+  .menu {
+      width: 100%;
+      padding: 10px;
+  }
+
+  .punto {
+      display: none; /* Ocultar los separadores "|" en móviles */
+  }
+}
+
+.scroll-oculto {
+  transform: translateY(-100%);
+}
+
+.scroll-oculto ~ .header {
+  top: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    
+    top: 165px;
+}
 }

@@ -1,0 +1,47 @@
+.boton-leer-mas {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--color-boton-verde);
+    color: var(--color-texto-claro);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .boton-leer-mas:hover {
+    background-color: var(--color-boton-verde-hover);
+  }
+  
+  .boton-escribenos,
+  .boton-proyectos {
+    background-color: var(--color-boton-naranja);
+    color: var(--color-texto-claro);
+    border: none;
+    padding: 15px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .boton-escribenos:hover,
+  .boton-proyectos:hover {
+    background-color: var(--color-boton-naranja-hover);
+    transform: scale(1.05);
+  }
+  
+  .boton-proyectos2 {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: var(--color-texto-claro);
+    background-color: var(--color-boton-naranja-hover);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .boton-proyectos2:hover {
+    background-color: var(--color-boton-naranja-hover);
+    transform: scale(1.05);
+  }
+  

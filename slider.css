@@ -48,3 +48,60 @@
 .thumbnails img.active {
     border: 2px solid #007bff;
 }
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .tarjeta {
+    flex: 0 0 calc(50% - 20px);
+    margin: 10px;
+    background-color: var(--color-slider-tarjeta);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .tarjeta:hover {
+    transform: scale(1.05);
+  }
+  
+  .tarjeta p {
+    color: var(--color-texto-secundario);
+  }
+  
+  .slider-btn {
+    background-color: var(--color-slider-btn);
+    color: var(--color-texto-claro);
+  }
+
+/* Botones del slider */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    z-index: 10;
+  }
+  
+  .slider-btn.prev {
+    left: 10px;
+  }
+  
+  .slider-btn.next {
+    right: 10px;
+  }  

@@ -19,6 +19,48 @@ function manejarScroll() {
     }
 }
 
+// Control de scroll
+let lastScroll = 0;
+
+function manejarScroll() {
+  const currentScroll = window.pageYOffset;
+  const navbarHeight = navbarEstatica.offsetHeight;
+  
+  if (currentScroll > lastScroll && currentScroll > 50) {
+    navbarEstatica.classList.add('scroll-oculto');
+    navbarOriginal.style.top = '0';
+  } else {
+    navbarEstatica.classList.remove('scroll-oculto');
+    navbarOriginal.style.top = `${navbarHeight}px`;
+  }
+  lastScroll = currentScroll;
+}
+
+
+
+// Cerrar menú al hacer clic fuera
+document.addEventListener('click', (e) => {
+  if (!navBoton.contains(e.target) && !navList.contains(e.target)) {
+    navList.classList.remove('visible');
+  }
+});
+
+// Cerrar menú al seleccionar opción
+document.querySelectorAll('.nav-list a').forEach(link => {
+  link.addEventListener('click', () => {
+    navList.classList.remove('visible');
+  });
+});
+
+// Event listeners
+window.addEventListener('scroll', manejarScroll);
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768) {
+    navList.classList.remove('visible');
+  }
+});
+
+
 // Ejecutar la función al cargar la página
 manejarScroll();
 
