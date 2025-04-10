@@ -7,6 +7,7 @@
   --color-boton-verde-hover: #45a049;
   --color-boton-naranja: #a86104;
   --color-boton-naranja-hover: #9a5700;
+  --colorfondo-separador:#a86104;
   --color-slider-tarjeta: #fafafa;
   --color-slider-btn: rgba(0, 0, 0, 0.5);
   --color-border-shadow: rgba(0, 0, 0, 0.1);
@@ -26,6 +27,7 @@
   --color-texto-claro: white;
   --color-texto-blanco: #ffffff;
   --color-texto-blanco-footer:#ccc;
+  --color-titulo-nosotros:#e0e0e0;
   --color-texto-suave: #666;
   --color-texto-hover: #ffd900;
   --color-texto-secundario: #555;

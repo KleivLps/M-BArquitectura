@@ -7,12 +7,15 @@
 
 .slider5 {
     position: relative;
-    width: 700px;
-    height: 900px;
-    overflow: hidden; /* Evita que imágenes fuera del área sean visibles */
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    aspect-ratio: 7/9; /* Mantiene la proporción 700x900 */
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
 }
 
 .slider5 img {
@@ -36,13 +39,13 @@
 }
 
 .thumbnails img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    cursor: pointer;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    transition: border 0.3s;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: border 0.3s;
 }
 
 .thumbnails img.active {
@@ -54,6 +57,7 @@
     overflow: hidden;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 40px;
   }
   
   .slider-container {
@@ -61,29 +65,8 @@
     transition: transform 0.5s ease;
   }
   
-  .tarjeta {
-    flex: 0 0 calc(50% - 20px);
-    margin: 10px;
-    background-color: var(--color-slider-tarjeta);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
+ 
   
-  .tarjeta:hover {
-    transform: scale(1.05);
-  }
-  
-  .tarjeta p {
-    color: var(--color-texto-secundario);
-  }
-  
-  .slider-btn {
-    background-color: var(--color-slider-btn);
-    color: var(--color-texto-claro);
-  }
 
 /* Botones del slider */
 .slider-btn {
@@ -96,6 +79,8 @@
     border-radius: 50%;
     font-size: 1.5rem;
     z-index: 10;
+    background-color: var(--color-slider-btn);
+    color: var(--color-texto-claro);
   }
   
   .slider-btn.prev {
@@ -105,3 +90,45 @@
   .slider-btn.next {
     right: 10px;
   }  
+
+
+
+  /* Media Queries para Responsive */
+@media (max-width: 768px) {
+  .slider5 {
+      aspect-ratio: 3/4; /* Proporción más adecuada para móviles */
+  }
+  
+  .thumbnails img {
+      width: 30px;
+      height: 30px;
+  }
+  
+  .tarjeta {
+      flex: 0 0 calc(100% - 20px); /* Una tarjeta por fila en móviles */
+  }
+  
+  .slider-btn {
+      padding: 8px;
+      font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider5 {
+      aspect-ratio: 2/3; /* Proporción más vertical para móviles pequeños */
+  }
+  
+  .thumbnails {
+      gap: 5px;
+  }
+  
+  .thumbnails img {
+      width: 25px;
+      height: 25px;
+  }
+  
+  .slider {
+      padding: 0 30px;
+  }
+}

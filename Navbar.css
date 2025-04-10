@@ -218,7 +218,6 @@
 .listas {
   line-height: 60px;
   font-size: 18px;
-  margin: 0 10px;
 }
 
 .menu {
@@ -260,7 +259,7 @@
 
   .nav-list {
     position: fixed;
-    top: 130px;
+    top: 60px;
     left: 0;
     width: 100%;
     background: #250902;
@@ -270,14 +269,17 @@
     overflow: hidden;
     transition: all 0.3s ease;
     padding: 0;
+    z-index: 998; /* Asegura que esté debajo de ambas navbars */
   }
 
   .nav-list.visible {
       display: flex; /* Mostrar la lista cuando tenga la clase "visible" */
       transform: translateY(0); /* Mostrar el menú */
-      height: calc(70vh - 70px);
+      height: calc(70vh - 60px);
     padding: 20px 0;
   }
+
+ 
 
   .listas {
       width: 100%;
@@ -304,9 +306,49 @@
   top: 0 !important;
 }
 
+/******************************/
+/* Responsive Navbar Estática */
+
+/* Variables Globales */
+:root {
+  --nav-top-visible: 130px; /* Valor por defecto para 768px */
+  --nav-top-hidden: 61px;
+}
+
+/* Breakpoint 768px */
 @media (max-width: 768px) {
   .nav-list {
-    
-    top: 165px;
+    top: var(--nav-top-visible);
+  }
+  
+  body.navbar-estatica-oculta .nav-list {
+    top: var(--nav-top-hidden);
+  }
 }
+
+/* Breakpoint 450px */
+@media (max-width: 450px) {
+  :root {
+    --nav-top-visible: 153px;
+    --nav-top-hidden: 61px;
+  }
+}
+
+/* Breakpoint 320px */
+@media (max-width: 320px) {
+  :root {
+    --nav-top-visible: 165px;
+    --nav-top-hidden: 65px;
+  }
+}
+
+/* Añade esto al final de tu CSS */
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px !important; /* Solo la altura de la navbar principal */
+  }
+  
+  .nav-list.visible + main {
+    margin-top: 60px !important;
+  }
 }

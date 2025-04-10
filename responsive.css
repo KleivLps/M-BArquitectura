@@ -64,7 +64,7 @@
   }
   
   /* Celulares pequeños */
-  @media (max-width:  var(--breakpoint-300)) {
+  @media (max-width:320px) {
     .titulo-indice {
       font-size: 22px;
     }
@@ -101,7 +101,7 @@
     }
   }
   
-  @media (max-width: var(--breakpoint-300)) {
+  @media (max-width:320px) {
     .tarjeta {
       flex: 0 0 calc(100% - 20px);
     }
@@ -488,5 +488,61 @@
   
   .separador {
     width: 120px;
+  }
+}
+
+/**************responsive-grill-proyectos**********/
+
+
+/* Responsive para pantallas medianas (tablets) */
+@media (max-width: 950px) {
+  .grid-proyectos {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      padding: 15px;
+  }
+  
+  .tarjeta-proyecto .contenido-tarjeta {
+      padding: 15px;
+  }
+}
+
+/* Responsive para pantallas pequeñas (móviles grandes) */
+@media (max-width: 768px) {
+  .grid-proyectos {
+      gap: 12px;
+      padding: 12px;
+  }
+  
+  .tarjeta-proyecto .contenido-tarjeta {
+      padding: 12px;
+  }
+}
+
+/* Responsive para móviles medianos */
+@media (max-width: 450px) {
+  .grid-proyectos {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      padding: 10px;
+  }
+  
+  .tarjeta-proyecto {
+      aspect-ratio: 3/2; /* Cambio de relación para móviles */
+  }
+  
+  .tarjeta-proyecto .contenido-tarjeta {
+      padding: 15px;
+  }
+}
+
+/* Responsive para móviles pequeños */
+@media (max-width: 320px) {
+  .tarjeta-proyecto .contenido-tarjeta h3 {
+      font-size: 1.1rem;
+  }
+  
+  .tarjeta-proyecto .contenido-tarjeta p {
+      font-size: 0.85rem;
   }
 }

@@ -3,6 +3,8 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
   .tarjeta-proyecto {
@@ -11,6 +13,7 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    aspect-ratio: 4/3;
   }
   
   .tarjeta-proyecto:hover {
@@ -45,15 +48,19 @@
     padding: 20px;
     color: var(--color-texto-claro);
     text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
   
   .tarjeta-proyecto .contenido-tarjeta h3 {
-    font-size: 1.5em;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
     margin-bottom: 10px;
   }
   
   .tarjeta-proyecto .contenido-tarjeta p {
-    font-size: 1em;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
     margin-bottom: 20px;
   }
   

@@ -13,6 +13,8 @@
   justify-content: center;
   gap: 20px; /* Espacio entre las tarjetas */
   padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 /* Estilos para cada tarjeta */
@@ -26,18 +28,30 @@
   width: 100%;
   flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Estilos para la imagen de fondo */
 .background {
   height: 300px; /* Altura fija para todas las imágenes */
   overflow: hidden; /* Asegura que la imagen no se desborde */
+  position: relative;
 }
 
 .background img {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+  transition: transform 0.5s ease;
+}
+
+.tarjeta2:hover .background img {
+  transform: scale(1.05);
 }
 
 /* Estilos para el contenido de la tarjeta */
@@ -45,25 +59,27 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1rem;
-  flex-grow: 1; /* Hace que el contenido ocupe el espacio restante */
-  min-height: 200px; /* Altura mínima para el contenido */
+  padding: 1.5rem;
+  flex-grow: 1;
+  min-height: 200px;
 }
 
 /* Estilos para el título */
 .content2 h2 {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  color: #333;
 }
 
 /* Estilos para el párrafo */
 .content2 p {
   font-size: 1rem;
   font-weight: 400;
-  margin-bottom: 1rem;
-  line-height: 1.4;
-  flex-grow: 1; /* Hace que el párrafo ocupe el espacio restante */
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+  color: #666;
+  flex-grow: 1;
 }
 
 /* Estilos para los iconos sociales */
@@ -75,24 +91,85 @@
 }
 
 .social-icons a {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   line-height: 45px;
-  color: #e8f3f1;
-  background-color: rgb(33, 34, 34);
+  color: #fff;
+  background-color: #222;
+  border-radius: 50%;
+  transition: all 0.3s ease;
   text-align: center;
-  transition: all 300ms ease;
 }
 
 .social-icons a:hover {
   background-color: #a86104;
+  transform: scale(1.1);
 }
 
-/* Media queries para responsividad */
+.tarjeta {
+  flex: 0 0 calc(50% - 20px);
+  min-width: 200px;
+  margin: 10px;
+  background-color: var(--color-slider-tarjeta);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05);
+}
+
+.tarjeta p {
+  color: var(--color-texto-secundario);
+}
+
 @media (max-width: 768px) {
+  .tarjeta-nosotros {
+    gap: 15px;
+    padding: 15px;
+  }
+  
   .tarjeta2 {
-    flex: 1 1 100%; /* En pantallas pequeñas, las tarjetas ocupan el 100% del ancho */
+    flex: 1 1 100%; /* 1 columna en móviles */
+    max-width: 400px;
+  }
+  
+  .background {
+    height: 250px;
+  }
+  
+  .content2 {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tarjeta-nosotros {
+    gap: 12px;
+    padding: 12px;
+  }
+  
+  .background {
+    height: 220px;
+  }
+  
+  .content2 h2 {
+    font-size: 1.3rem;
+  }
+  
+  .content2 p {
+    font-size: 0.9rem;
+  }
+  
+  .social-icons a {
+    width: 36px;
+    height: 36px;
   }
 }

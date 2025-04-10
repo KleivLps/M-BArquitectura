@@ -1,10 +1,58 @@
+/* Estilos base para todas las secciones */
 section {
-    padding: 20px;
-    margin: 20px 0;
+  padding: 1.25rem; /* 20px */
+  margin: 1.25rem 0; /* 20px */
+  transition: all 0.5s ease-out;
+}
+
+/* Animación para secciones */
+.seccion-animada {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.seccion-animada.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Media Queries para responsividad */
+
+/* Tablet (768px) */
+@media (max-width: 48rem) {
+  section {
+    padding: 1rem; /* 16px */
+    margin: 1rem 0;
   }
   
-  .seccion-animada.visible {
-    opacity: 1;
-    transform: translateY(0);
+  .seccion-animada {
+    transform: translateY(20px);
+  }
+}
+
+/* Móvil Grande (450px) */
+@media (max-width: 28.125rem) {
+  section {
+    padding: 0.75rem; /* 12px */
+    margin: 0.75rem 0;
   }
   
+  .seccion-animada {
+    transform: translateY(15px);
+    transition-duration: 0.6s;
+  }
+}
+
+/* Móvil Pequeño (320px) */
+@media (max-width: 20rem) {
+  section {
+    padding: 0.5rem; /* 8px */
+    margin: 0.5rem 0;
+  }
+  
+  .seccion-animada {
+    transform: translateY(10px);
+    transition-duration: 0.4s;
+  }
+}

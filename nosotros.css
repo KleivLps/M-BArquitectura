@@ -1,12 +1,12 @@
 #nosotros-inicio {
-  padding: 40px 20px;
-  background-color:#242423; 
+  padding: 2.5rem 1.25rem;
+  background-color: var(--color-fondo-principal);
 }
 
 #nosotros-inicio2 {
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem;
   text-align: center;
-  background-color: #242423;
+  background-color: var(--color-fondo-principal);
   margin: 0 auto; /* Centrar horizontalmente */
   display: block; /* Asegurar que ocupe todo el ancho disponible */
 }
@@ -14,25 +14,25 @@
 .parrafo-nosotros4 {
   max-width: 1000px; /* Limita el ancho del texto para mejor legibilidad */
   margin: 0 auto; /* Centrar el texto */
-  color: white; /* Asegurar buen contraste con el fondo oscuro */
+  color: var(--color-texto-claro); /* Asegurar buen contraste con el fondo oscuro */
 }
 
 .parrafo-nosotros5 {
   max-width: 300px; /* Limita el ancho del texto para mejor legibilidad */
   margin: 0 auto; /* Centrar el texto */
-  color: white; /* Asegurar buen contraste con el fondo oscuro */
+  color: var(--color-texto-claro); /* Asegurar buen contraste con el fondo oscuro */
 }
 
 /* Título centrado */
 .titulo-nosotros {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-size: clamp(2em, 6vw, 3em);
-    color: #e0e0e0; /* Color del texto */
-    margin-bottom: clamp(15px, 3vw, 20px);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: clamp(2rem, 6vw, 3rem);
+  color: var(--color-titulo-nosotros); /* Color del texto */
+  margin-bottom: clamp(0.9375rem, 3vw, 1.25rem);
 }
 
 .titulo-nosotros2 {
@@ -42,157 +42,181 @@
   font-weight: weight;
   font-style: normal;
   font-size: clamp(1.5em, 4vw, 1.8em);
-  color: #e0e0e0; /* Color del texto */
+  color: var(--color-titulo-nosotros); /* Color del texto */
   margin-bottom: 20px;
 }
 
 .titulo-nosotros3 {
   text-align: center;
-  font-family: "Dosis","Montserrat", sans-serif, "Libre Franklin";
+  font-family: "Dosis", "Montserrat", sans-serif, "Libre Franklin";
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
-  font-size: clamp(0.9em, 3vw, 1em);
-  color: #e0e0e0; /* Color del texto */
+  font-size: clamp(0.9rem, 3vw, 1rem);
+  color: var(--color-titulo-nosotros); /* Color del texto */
   margin-bottom: 20px;
+  padding: 1.25rem 0;
   padding-bottom: 20px;
   padding-top: 20px;
 }
 
-.titulo-nosotross4 {
-  text-align: center;
-  font-family: "Dosis","Montserrat", sans-serif, "Libre Franklin";
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: clamp(1.2em, 4vw, 1.5em);
-  color: #e0e0e0; /* Color del texto */
+.titulo-nosotros4 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: bold;
+  color: var(--color-titulo-nosotros);
+  margin-bottom: 0;
+}
+
+.titulo-nosotros5 {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-weight: 500;
+  color: var(--color-titulo-nosotros);
+  font-family: "Oswald";
   margin-bottom: 20px;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  margin-left: 20px;
 }
 
 .titulo-nosotros6 {
   text-align: center;
-  font-family: "Dosis","Montserrat", sans-serif, "Libre Franklin";
+  font-family: "Dosis", "Montserrat", sans-serif, "Libre Franklin";
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
   font-size: 1em;
   margin: 8px;
-  color: #e0e0e0; /* Color del texto */
-  
+  color: var(--color-titulo-nosotros); /* Color del texto */
 }
+
+.titulo-nosotross4 {
+  text-align: center;
+  font-family: "Dosis", "Montserrat", sans-serif, "Libre Franklin";
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(1.2em, 4vw, 1.5em);
+  color: var(--color-titulo-nosotros); /* Color del texto */
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+
 
 /* Contenedor principal */
 .contenedor-nosotros {
-    max-width: 1200px; /* Ancho máximo del contenedor */
-    margin: 0 auto; /* Centrar el contenedor */
-    display: flex;
-    flex-wrap: wrap; /* Permitir que los elementos se ajusten en pantallas pequeñas */
-    gap: 30px; /* Espacio entre el texto y la imagen */
-    padding: 20px;
-    border: 1px solid #e0e0e0; /* Borde estilo tarjeta */
-    border-radius: 10px; /* Esquinas redondeadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    background-color: #ffffff; /* Fondo blanco */
+  max-width: 75rem; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centrar el contenedor */
+  display: flex;
+  flex-wrap: wrap; /* Permitir que los elementos se ajusten en pantallas pequeñas */
+  gap: 1.875rem; /* Espacio entre el texto y la imagen */
+  padding: 1.25rem;
+  border: 1px solid var(--color-borde-tarjeta); /* Borde estilo tarjeta */
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 8px var(--color-border-shadow); /* Sombra suave */
+  background-color: var(--color-fondo-claro); /* Fondo blanco */
 }
 
 /* Estilos para el texto */
 .texto-nosotros {
-    flex: 1; /* Ocupa el espacio disponible */
-    min-width: 300px;
-    max-width: 500px; /* Ancho mínimo para evitar que el texto se comprima demasiado */
-    padding-left: 80px;
-    padding-right: 80px;
-    padding: 0 40px;
+  flex: 1;
+  min-width: 18.75rem; 
+  max-width: 500px; /* Ancho mínimo para evitar que el texto se comprima demasiado */
+  padding-left: 80px;
+  padding-right: 80px;
+  padding: 0 2.5rem;
 }
 
 .parrafo-nosotros {
-    font-size:0.8em;
-    line-height: 1.6;
-    color: #555; /* Color del texto */
-    text-align: justify; /* Texto justificado */
-    margin-bottom: 20px;
-    font-family: "Montserrat", sans-serif, "Libre Franklin";
-    font-weight: 500;
-     /* Espacio entre párrafos */
+  font-size: 0.8em;
+  max-width: 100%;
+  line-height: 1.6;
+  color: var(--color-texto-principal); /* Color del texto */
+  text-align: justify; /* Texto justificado */
+  margin: 0 auto 1.25rem;
+  font-family: "Montserrat", sans-serif, "Libre Franklin";
+  font-weight: 500;
+  /* Espacio entre párrafos */
 }
 
 .parrafo-nosotros2 {
+  max-width: 100%;
   font-size: 1.2em;
   line-height: 1.6;
-  color: #fafafa;
-  font-family:  "Montserrat", sans-serif, "Libre Franklin";
+  color:var(--color-texto-blanco-footer);
+  font-family: "Montserrat", sans-serif, "Libre Franklin";
   text-align: center;
+  margin: 0 auto 1.25rem;
   margin-bottom: 20px;
 }
 
 .parrafo-nosotros3 {
-  font-size:1.1em;
+  max-width: 100%;
+  font-size: 1.1em;
   line-height: 1.6;
-  color: #fafafa; /* Color del texto */
+  color:var(--color-texto-blanco-footer); /* Color del texto */
   text-align: justify; /* Texto justificado */
   margin-bottom: 20px;
+  margin: 0 auto 1.25rem;
   font-family: "Montserrat", sans-serif, "Libre Franklin";
   font-weight: 500;
-   /* Espacio entre párrafos */
+  /* Espacio entre párrafos */
 }
 
 .parrafo-nosotros4 {
-  font-size:1em;
-  line-height: 1.3;
   max-width: 100%;
+  font-size: 1em;
+  line-height: 1.3;
+  max-width: 62.5rem;
   margin: 0 auto;
-  color: #fafafa; /* Color del texto */
+  color:var(--color-texto-blanco-footer); /* Color del texto */
   text-align: justify; /* Texto justificado */
   margin-bottom: 20px;
+  margin: 0 auto 1.25rem;
   font-family: "Montserrat", sans-serif, "Libre Franklin";
   font-weight: 500;
-   /* Espacio entre párrafos */
+  /* Espacio entre párrafos */
 }
 
 .parrafo-nosotros5 {
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 200;
-  color: #ebe5e5;
-  max-width: 100%;
-  margin: 0 auto;
+  color: var(--color-texto-blanco-footer);
+  max-width: 18.75rem;
+  margin: 0 auto 1.25rem;
   font-family: "Roboto Flex";
   margin-bottom: 15px;
   margin-left: 20px;
   text-align: justify;
 }
 
-.texto-fuerte{
-    font-weight: bold;
-    font-size: 1.6em;
-    
-}
-
-.texto-fuerte2{
+.texto-fuerte {
   font-weight: bold;
   font-size: 1.6em;
-  color: #fafafa;
+}
+
+.texto-fuerte2 {
+  font-weight: bold;
+  font-size: 1.6em;
+  color: var(--color-texto-blanco-footer);
 }
 
 /* Estilos para la imagen */
 .imagen-nosotros {
-    flex: 1; /* Ocupa el espacio disponible */
-    min-width: 300px; /* Ancho mínimo para evitar que la imagen se comprima demasiado */
-    max-width: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  flex: 1;
+  min-width: 18.75rem; 
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .imagen-nosotros img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px; /* Esquinas redondeadas para la imagen */
-    object-fit: contain;
-    width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.625rem;
+  object-fit: cover;
+  width: 100%;
 }
 
 /* Estilos generales para la sección "Nosotros" */
@@ -201,103 +225,113 @@
   margin-top: 30px;
   flex-direction: column;
   align-items: center;
-  padding: 20px;/* Color de fondo opcional */
+  padding: 20px; /* Color de fondo opcional */
 }
-
 
 /* Contenedor principal */
 .Nosotros-container {
   display: flex;
   width: 100%;
-  max-width: 1200px; /* Ancho máximo para evitar que se estire demasiado */
+  max-width: 75rem; /* Ancho máximo para evitar que se estire demasiado */
   margin: 0 auto; /* Centrar el contenedor */
+  flex-wrap: wrap;
+  gap: 1.875rem; /* 30px */
+  padding: 1.25rem;
   flex-direction: column;
 }
 
 /* Estilos para la imagen */
 .Nosotros-imagen {
-  flex: 1; /* Ocupa la mitad del espacio disponible */
+  flex: 1;
+  min-width: 18.75rem; 
   display: flex;
   justify-content: flex-end; /* Alinea la imagen a la derecha */
-  min-width: 100%;
 }
 
 .img-nosotros {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ajusta la imagen sin distorsionarla */
-  border-radius: 10px; /* Bordes redondeados opcionales */
+  height: auto;
+  border-radius: 0.625rem;
+  object-fit: cover;
 }
 
 /* Estilos para el texto */
 .Nosotros-texto {
-  flex: 1; /* Ocupa la otra mitad del espacio disponible */
+  flex: 1;
+  min-width: 18.75rem; 
   padding: 20px;
   display: flex;
-  min-width: 100%;
   flex-direction: column;
   justify-content: center; /* Centra el texto verticalmente */
 }
-
-.titulo-nosotros4 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 0;
-}
-
-.titulo-nosotros5 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #fbfbfb;
-    font-family: "Oswald";
-    margin-bottom:20px ;
-    margin-left: 20px;
-  }
 
 
 
 /* Separador */
 .separador {
-  width: 250px;
-  height: 2px;
-  background-color: #a86104; /* Color del separador */
-  margin: 10px auto 30px; /* Centrado horizontal */
+  width: 15.625rem; /* 250px */
+  height: 0.125rem; /* 2px */
+  background-color: var(--colorfondo-separador); /* Color del separador */
+  margin: 0.625rem auto 1.875rem;
+  }
+
+/* Tablet (768px) */
+@media (max-width: 48rem) {
+  #nosotros-inicio,
+  #nosotros-inicio2 {
+    padding: 2rem 1rem;
+  }
+
+  .texto-nosotros {
+    padding: 0 1.5rem;
+  }
+
+  .parrafo-nosotros5 {
+    margin-left: 1rem;
+  }
+
+  .titulo-nosotros5 {
+    margin-left: 1rem;
+  }
 }
 
-/* Responsividad para pantallas pequeñas */
-@media (max-width: 768px) {
+/* Móvil Grande (450px) */
+@media (max-width: 28.125rem) {
+  #nosotros-inicio,
+  #nosotros-inicio2 {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .contenedor-nosotros,
   .Nosotros-container {
-    flex-direction: column; /* Cambia a una columna en pantallas pequeñas */
+    padding: 0.75rem;
+    gap: 1rem;
   }
 
-  .Nosotros-imagen {
-    order: 2; /* La imagen va debajo del texto en móviles */
-    justify-content: center; /* Centra la imagen */
+  .texto-nosotros {
+    padding: 0 1rem;
   }
 
-  .Nosotros-texto {
-    order: 1; /* El texto va primero en móviles */
-    padding: 10px;
-  }
-
-  .img-nosotros {
-    max-height: 300px; /* Limita la altura de la imagen en móviles */
+  .separador {
+    width: 12.5rem;
+    margin: 0.5rem auto 1.5rem;
   }
 }
 
-@media (min-width: 769px) {
-  .Nosotros-container {
-    flex-direction: row;
-  }
-}
-
-@media (min-width: 769px) {
+/* Móvil Pequeño (320px) */
+@media (max-width: 20rem) {
+  .texto-nosotros,
+  .imagen-nosotros,
+  .Nosotros-texto,
   .Nosotros-imagen {
-    min-width: 50%;
+    min-width: 100%;
   }
-  
-  .Nosotros-texto {
-    min-width: 50%;
+
+  .parrafo-nosotros5 {
+    margin-left: 0.5rem;
+  }
+
+  .titulo-nosotros5 {
+    margin-left: 0.5rem;
   }
 }

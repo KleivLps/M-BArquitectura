@@ -19,6 +19,40 @@ function manejarScroll() {
     }
 }
 
+
+
+
+const navBoton = document.querySelector('.nav-boton');
+const navList = document.querySelector('.nav-list');
+let isScrolling = false;
+
+// Función para cerrar el menú hamurguésa
+function cerrarMenu() {
+    navList.classList.remove('visible');
+    navBoton.setAttribute('aria-label', 'Abrir menu');
+}
+
+// Control del scroll con debounce
+window.addEventListener('scroll', () => {
+    if (!isScrolling) {
+        window.requestAnimationFrame(() => {
+            if (window.innerWidth <= 768) {
+                cerrarMenu();
+            }
+            isScrolling = false;
+        });
+    }
+    isScrolling = true;
+});
+
+
+//termina la navbar
+
+//empeiza el scroll de navbar estatica
+
+
+
+
 // Control de scroll
 let lastScroll = 0;
 
@@ -38,14 +72,14 @@ function manejarScroll() {
 
 
 
-// Cerrar menú al hacer clic fuera
+// Cerrar menú hamburguesa al hacer clic fuera
 document.addEventListener('click', (e) => {
   if (!navBoton.contains(e.target) && !navList.contains(e.target)) {
     navList.classList.remove('visible');
   }
 });
 
-// Cerrar menú al seleccionar opción
+// Cerrar menú hamburguesa al seleccionar opción
 document.querySelectorAll('.nav-list a').forEach(link => {
   link.addEventListener('click', () => {
     navList.classList.remove('visible');
