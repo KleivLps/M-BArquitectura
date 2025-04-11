@@ -209,8 +209,9 @@
 /* Tablet - 768px */
 @media (max-width: 768px) {
   .contenedor-footer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+   
+    text-align: center;
+    grid-template-columns:( 1fr);
     gap: 25px;
   }
   
@@ -229,6 +230,7 @@
 @media (max-width: 450px) {
   .contenedor-footer {
     grid-template-columns: 1fr;
+    display: grid;
     text-align: center;
   }
   
@@ -276,6 +278,7 @@
 @media (max-width: 320px) {
   .social-icons-footer a {
     width: 30px;
+    display: grid;
     height: 30px;
     line-height: 30px;
   }

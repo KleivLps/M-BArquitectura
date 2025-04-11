@@ -59,9 +59,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.5rem;
+  padding: 1.25rem;
   flex-grow: 1;
-  min-height: 200px;
+
+  min-height: 300px;
 }
 
 /* Estilos para el título */
@@ -130,46 +131,3 @@
   color: var(--color-texto-secundario);
 }
 
-@media (max-width: 768px) {
-  .tarjeta-nosotros {
-    gap: 15px;
-    padding: 15px;
-  }
-  
-  .tarjeta2 {
-    flex: 1 1 100%; /* 1 columna en móviles */
-    max-width: 400px;
-  }
-  
-  .background {
-    height: 250px;
-  }
-  
-  .content2 {
-    padding: 1.25rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .tarjeta-nosotros {
-    gap: 12px;
-    padding: 12px;
-  }
-  
-  .background {
-    height: 220px;
-  }
-  
-  .content2 h2 {
-    font-size: 1.3rem;
-  }
-  
-  .content2 p {
-    font-size: 0.9rem;
-  }
-  
-  .social-icons a {
-    width: 36px;
-    height: 36px;
-  }
-}

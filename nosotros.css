@@ -237,7 +237,6 @@
   flex-wrap: wrap;
   gap: 1.875rem; /* 30px */
   padding: 1.25rem;
-  flex-direction: column;
 }
 
 /* Estilos para la imagen */
@@ -276,7 +275,7 @@
   }
 
 /* Tablet (768px) */
-@media (max-width: 48rem) {
+@media (max-width:768px) {
   #nosotros-inicio,
   #nosotros-inicio2 {
     padding: 2rem 1rem;
@@ -296,7 +295,7 @@
 }
 
 /* Móvil Grande (450px) */
-@media (max-width: 28.125rem) {
+@media (max-width: 450px) {
   #nosotros-inicio,
   #nosotros-inicio2 {
     padding: 1.5rem 0.75rem;

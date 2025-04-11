@@ -54,7 +54,6 @@ body {
 /*indice*/
 
 .headere {
-  height: 15vh !important;
   min-height: 6rem;
   background: linear-gradient(rgba(0,0,0,var(--opacidad-negro)), rgba(0,0,0,var(--opacidad-negro))), url(./images/IaKrea/corte1c.png) no-repeat center;
   background-size: cover;
@@ -118,7 +117,6 @@ body {
 @media (max-width: 768px) {
   .headere {
     margin-top: 5rem;
-    height: 12vh;
     min-height: 5rem;
   }
   
@@ -130,8 +128,8 @@ body {
 /* Móvil Grande (450px) */
 @media (max-width: 450px) {
   .headere {
-    margin-top:6.5rem;
-    height: 10vh;
+    height: 20vh;
+    margin-top: 120px;
     min-height: 4rem;
     background-attachment: scroll;
   }
@@ -148,7 +146,7 @@ body {
 /* Móvil Pequeño (320px) */
 @media (max-width:320px) {
   .headere {
-    height: 8vh;
+   margin-top: 120px;
     min-height: 3.5rem;
   }
   

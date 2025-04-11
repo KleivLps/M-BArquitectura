@@ -207,7 +207,7 @@
 
 .nav-list {
   display: flex;
-  gap: 25px;
+  gap: 15px;
   align-items: center;
   list-style: none;
   margin: 0;
@@ -275,7 +275,7 @@
   .nav-list.visible {
       display: flex; /* Mostrar la lista cuando tenga la clase "visible" */
       transform: translateY(0); /* Mostrar el menú */
-      height: calc(70vh - 60px);
+      height: calc(50vh - 60px);
     padding: 20px 0;
   }
 
@@ -311,7 +311,7 @@
 
 /* Variables Globales */
 :root {
-  --nav-top-visible: 130px; /* Valor por defecto para 768px */
+  --nav-top-visible: 148px; /* Valor por defecto para 768px */
   --nav-top-hidden: 61px;
 }
 
@@ -329,7 +329,7 @@
 /* Breakpoint 450px */
 @media (max-width: 450px) {
   :root {
-    --nav-top-visible: 153px;
+    --nav-top-visible: 173px;
     --nav-top-hidden: 61px;
   }
 }
@@ -337,7 +337,7 @@
 /* Breakpoint 320px */
 @media (max-width: 320px) {
   :root {
-    --nav-top-visible: 165px;
+    --nav-top-visible: 183px;
     --nav-top-hidden: 65px;
   }
 }
